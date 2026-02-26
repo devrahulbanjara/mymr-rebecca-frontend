@@ -4,20 +4,12 @@ export default function Sidebar({ patients, activePatient, onSelectPatient }) {
   return (
     <aside className="w-72 bg-white border-r border-slate-200 h-screen flex flex-col">
       {/* Logo & Header */}
-      <div className="p-6 border-b border-slate-100">
-        <div className="flex items-center gap-3">
-          <div className="text-[#1e4d8c]">
-            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12C8 12 12 8 20 8C28 8 32 12 32 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-              <path d="M8 20C8 20 12 16 20 16C28 16 32 20 32 20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-              <path d="M8 28C8 28 12 24 20 24C28 24 32 28 32 28" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-            </svg>
-          </div>
-          <div>
-            <h1 className="text-xl font-bold text-[#1e4d8c] tracking-tight">MyMR</h1>
-            <p className="text-[10px] text-slate-500 font-medium">Empowering Patients Through Intelligent Care</p>
-          </div>
-        </div>
+      <div className="p-0 border-b border-slate-100 flex justify-center items-center">
+        <img 
+          src="/mymr-logo.png" 
+          alt="MyMR Logo" 
+          className="w-32 h-32 object-contain"
+        />
       </div>
 
       {/* Search Bar */}
@@ -72,12 +64,12 @@ export default function Sidebar({ patients, activePatient, onSelectPatient }) {
       {/* Footer */}
       <div className="p-4 border-t border-slate-100">
         <div className="flex items-center gap-3 px-2">
-          <div className="w-8 h-8 rounded-lg bg-[#1e4d8c]/10 flex items-center justify-center text-[#1e4d8c] text-xs font-bold">
-            AI
+          <div className="w-8 h-8 rounded-lg bg-[#1e4d8c]/10 flex items-center justify-center">
+            <Activity size={16} className="text-[#1e4d8c]" />
           </div>
           <div className="flex-1">
-            <p className="text-xs font-medium text-slate-700">AI Comparison Mode</p>
-            <p className="text-[10px] text-slate-400">Multi-model analysis</p>
+            <p className="text-xs font-medium text-slate-700">Rebecca AI Assistant</p>
+            <p className="text-[10px] text-slate-400">Powered by Claude 3.5</p>
           </div>
         </div>
       </div>

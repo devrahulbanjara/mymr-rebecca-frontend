@@ -24,21 +24,19 @@ function App() {
             <div className="text-center max-w-xl px-8">
               {/* Logo */}
               <div className="mb-8 inline-flex">
-                <div className="text-[#1e4d8c]">
-                  <svg width="64" height="64" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 12C8 12 12 8 20 8C28 8 32 12 32 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                    <path d="M8 20C8 20 12 16 20 16C28 16 32 20 32 20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                    <path d="M8 28C8 28 12 24 20 24C28 24 32 28 32 28" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                  </svg>
-                </div>
+                <img 
+                  src="/mymr-logo.png" 
+                  alt="MyMR Logo" 
+                  className="w-16 h-16 object-contain"
+                />
               </div>
 
               {/* Title */}
               <h1 className="text-3xl font-bold text-[#1e4d8c] mb-3 tracking-tight">
-                About MyMR
+                Meet Rebecca
               </h1>
               <p className="text-slate-600 mb-8 leading-relaxed">
-                <span className="font-medium text-slate-800">MyMR was built to solve this.</span> We empower patients with full ownership and secure control of their medical records while connecting providers, payors, and health systems on one interoperable, AI-powered platform.
+                <span className="font-medium text-slate-800">Your AI Healthcare Assistant.</span> Rebecca helps you access and understand medical records with intelligent, conversational insights powered by advanced AI.
               </p>
 
               {/* Features */}
@@ -48,7 +46,7 @@ function App() {
                     <div className="w-2 h-2 rounded-full bg-[#1e4d8c]"></div>
                   </div>
                   <p className="text-sm text-slate-600">
-                    <span className="font-medium text-slate-800">Multi-Model AI Analysis</span> — Compare responses from Claude and MedGemma side-by-side
+                    <span className="font-medium text-slate-800">Intelligent Assistance</span> — Get instant answers about patient medical records
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
@@ -56,7 +54,7 @@ function App() {
                     <div className="w-2 h-2 rounded-full bg-[#1e4d8c]"></div>
                   </div>
                   <p className="text-sm text-slate-600">
-                    <span className="font-medium text-slate-800">Intelligent Automation</span> — Transform how healthcare data is used
+                    <span className="font-medium text-slate-800">Natural Conversations</span> — Ask questions in plain language
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
@@ -64,7 +62,7 @@ function App() {
                     <div className="w-2 h-2 rounded-full bg-[#1e4d8c]"></div>
                   </div>
                   <p className="text-sm text-slate-600">
-                    <span className="font-medium text-slate-800">Personalized Healthcare</span> — Digital twins for real-time health insights
+                    <span className="font-medium text-slate-800">Secure & Private</span> — Your data stays protected and confidential
                   </p>
                 </div>
               </div>
