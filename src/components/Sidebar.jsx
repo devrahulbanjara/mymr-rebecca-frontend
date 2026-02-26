@@ -4,7 +4,7 @@ export default function Sidebar({ patients, activePatient, onSelectPatient }) {
   return (
     <aside className="w-72 bg-white border-r border-slate-200 h-screen flex flex-col">
       {/* Logo & Header */}
-      <div className="p-0 border-b border-slate-100 flex justify-center items-center">
+      <div className="p-4 border-b border-slate-100 flex justify-center items-center">
         <img 
           src="/mymr-logo.png" 
           alt="MyMR Logo" 

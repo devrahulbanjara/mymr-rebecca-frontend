@@ -160,7 +160,8 @@ export default function ChatWindow({ patient }) {
     setQuery("");
 
     try {
-      const res = await fetch("/api/chat", {
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+      const res = await fetch(`${backendUrl}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query, patient_id: patient.id, document_type: "" }),
