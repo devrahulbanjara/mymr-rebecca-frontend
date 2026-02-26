@@ -160,7 +160,7 @@ export default function ChatWindow({ patient }) {
     setQuery("");
 
     try {
-      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+      const backendUrl = 'https://mymr-rebecca-backend.vercel.app';
       const res = await fetch(`${backendUrl}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
