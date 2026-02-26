@@ -191,9 +191,24 @@ export default function ChatWindow({ patient }) {
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
       console.error("Error:", error);
+      
+      let errorMessage = "I apologize, but I'm having trouble connecting to the server. ";
+      
+      if (error.message === "Failed to fetch") {
+        errorMessage += "This could be due to:\n\n" +
+          "• The backend server is not running\n" +
+          "• CORS is not configured on the backend\n" +
+          "• Network connectivity issues\n" +
+          "• The backend URL is incorrect\n\n" +
+          `Current backend URL: ${import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000'}\n\n` +
+          "Please check the browser console for more details.";
+      } else {
+        errorMessage += `Error: ${error.message}`;
+      }
+      
       setMessages((prev) => [...prev, {
         role: "bot",
-        content: `Error: ${error.message}. Please make sure the backend server is running.`,
+        content: errorMessage,
         isError: true,
       }]);
     } finally {
